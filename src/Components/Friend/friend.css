@@ -1,0 +1,9 @@
+.friend{
+    border: 2px solid goldenrod;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+}
