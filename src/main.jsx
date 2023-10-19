@@ -2,10 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom"
+import {createBrowserRouter, RouterProvider} from "react-router-dom"
 import ErrorPage from './error-page.jsx'
 import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
@@ -13,6 +10,7 @@ import Contact from './Components/Contact/Contact.jsx'
 import First from './Components/First/First.jsx'
 import Friends from './Components/Friends/Friends.jsx'
 import FriendDetails from './Components/FriendDetails/FriendDetails.jsx'
+import Posts from './Components/Posts/Posts.jsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +31,11 @@ const router = createBrowserRouter([
         path: "/friend/:friendId",
         element: <FriendDetails></FriendDetails>,
         loader: ({params})=> fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`)
+      },
+      {
+        path:"/posts",
+        element:<Posts></Posts>,
+        loader: ()=>fetch('https://jsonplaceholder.typicode.com/posts')
       },
       {
         path: "/about",
