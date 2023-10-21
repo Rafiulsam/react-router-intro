@@ -6,7 +6,7 @@ const Posts = () => {
     const posts = useLoaderData()
     return (
         <div>
-            <h2>all post goes here: {posts.length}</h2>
+            <h2>All post goes here: {posts.length}</h2>
             <div>
                 {
                     posts.map(post => <Post key={post.id} post={post}></Post>)
