@@ -1,9 +1,10 @@
 import React from 'react';
+import App from '../../App';
 
 const First = () => {
     return (
         <div>
-            <h1>This is Home/First page</h1>
+            <App></App>
         </div>
     );
 };
